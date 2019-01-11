@@ -1,0 +1,169 @@
+﻿body {
+    background-color: #F5F5F5;
+    padding-right: 0px;
+    padding-left: 0px;
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+
+#header h1 {
+    font-size: 44px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#header {
+    color: #ffffff;
+}
+
+#header .paralax {
+    background-image: url("../Images/header.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 464px;
+}
+
+#header .left-col {
+    padding-top:60px;
+}
+
+#header .right-col {
+    padding-top: 60px;
+}
+
+
+#header p {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+#header .big{
+    font-size:35px;
+    line-height:43px;
+}
+
+#header .description{
+    margin-top:30px;
+}
+
+
+#header .container.row {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#header a.but-border{
+    font-size:22px;
+    margin-top:10px;
+}
+
+.font-grey {
+    color:#464646
+}
+
+a.but-border {
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    height: 50px;
+    display: inline-block;
+    padding: 0px 25px 0px 25px;
+    background: none;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 100%;
+    vertical-align: middle;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    padding-top:10px;
+}
+
+a.but-border:hover {
+    background-color: white;
+    color: #464646;
+}
+
+#navigationBar {
+    background-color: #51697D;
+    text-align:center;
+}
+
+#navigationBar nav{
+    background-color:unset !important;
+    color:white !important;
+}
+
+#navigationBar .nav-item.active{
+    font-weight:bold;
+    border-bottom:3px solid white;
+}
+
+#navigationBar .nav-item {
+    height: 65px;
+    padding-top: 13px;
+}
+
+#navigationBar .navbar {
+    padding: 0px;
+}
+
+
+#competenceSection {
+    padding-bottom: 50px;
+}
+
+#competenceSection .skill h3 {
+    color: #464646;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+#competenceSection .skill {
+    max-width: 488px;
+    margin: 0 auto;
+    padding-top:40px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #222C37;
+    text-align: center;
+    margin-top:80px;
+    margin-bottom:40px;
+}
+
+#myProject {
+    background-color: #E0E0E0;
+    display: inline-block;
+    padding-bottom:80px;
+}
+
+#myProject .project{
+    padding-top:80px;
+}
+
+#myProject .project img {
+    width: 100%;
+    height: auto;
+}
+
+#footer {
+    height: 60px;
+    background-color: #51697D;
+    color: white;
+    font-size: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+}
