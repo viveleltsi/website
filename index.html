@@ -11,8 +11,12 @@
 
 </head>
 <body>
+    
     <section id="header" class="container-fluid">
+        
         <div class="paralax row">
+            <div id="particles-js">
+            </div>
             <div class="container row">
                 <div class="left-col col-md-8">
                     <h1>Dan Bourquin</h1>
@@ -22,7 +26,9 @@
                         Game Designer
                     </p>
                     <p class="description">
-                        Vous recherchez un développeur compétent. Je suis à la recherche de projet intéressant. Contactez moi!
+                        <!--
+                            Vous recherchez un développeur compétent. Je suis à la recherche de projet intéressant. Contactez moi!
+                        -->
                     </p>
                     <div class="text-center">
                         <a href="#" class="but-border">
@@ -92,7 +98,7 @@
                 </p>
             </div>
         </div>
-        
+
     </section>
     <section id="myProject" class="container-fluid">
         <div class="container">
@@ -128,7 +134,15 @@
         Toutes les images appartiennent à leurs propriétaires respectifs
 
     </section>
-    <script src="js/scripts.js"></script>
+
+    <script src="Content/Js/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'Content/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+
+    <script src="Content/Js/scripts.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 </body>
 </html>
