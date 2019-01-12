@@ -4,16 +4,6 @@
     padding-left: 0px;
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 }
-
-#particles-js {
-    width: 100%;
-    height: 100%;
-    height: 464px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .row {
     margin-right: 0px;
     margin-left: 0px;
@@ -33,6 +23,17 @@
 
 #header {
     color: #ffffff;
+   
+}
+
+#particles-js {
+    width: 100%;
+    height: 464px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;/*TODO Change to %*/
 }
 
 #header .paralax {
@@ -41,15 +42,48 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 464px;
+    width: 100vw;
+    height: 464px;
+    height: 100%;
+    position: fixed;
+   
+    background: url("../Images/header.png") no-repeat center;
+    z-index: -1;
+    background-size: cover;
+    overflow: hidden;
 }
 
+
 #header .left-col {
-    padding-top:60px;
+    padding-top: 60px;
 }
 
 #header .right-col {
     padding-top: 60px;
 }
+
+@media screen and (max-width: 640px) {
+    #header {
+        height: 100vh;
+    }
+    #header .paralax {
+        height: 100vh;
+    }
+    .picture-me {
+        width: 200px;
+        height: 200px;
+    }
+    #header .right-col {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    #header .left-col {
+        text-align: center;
+        padding-top: 30px;
+    }
+}
+
 
 
 #header p {
@@ -72,9 +106,10 @@
     margin: 0 auto;
 }
 
-#header a.but-border{
-    font-size:22px;
-    margin-top:10px;
+#header a.but-border {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 27px;
 }
 
 .font-grey {
@@ -130,6 +165,7 @@ a.but-border:hover {
 
 #competenceSection {
     padding-bottom: 50px;
+    background-color:white;
 }
 
 #competenceSection .skill h3 {
@@ -149,14 +185,65 @@ h2 {
     font-weight: bold;
     color: #222C37;
     text-align: center;
-    margin-top:80px;
-    margin-bottom:40px;
+    padding-top: 80px;
+    padding-bottom: 40px;
 }
 
 #myProject {
     background-color: #E0E0E0;
     display: inline-block;
     padding-bottom:80px;
+}
+
+.project-picture{
+    position:relative;
+    color:white;
+    text-align:center;
+    cursor:pointer;
+}
+
+.project-picture .project-background {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.project-picture .project-link {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 55px;
+    height: 55px;
+    background-color: #51697D;
+    background-image:url("../Images/link.png");
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.project-picture .project-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.project-picture .project-detail{
+    position:relative;
+    opacity:0;
+    transition:0.2s;
+}
+
+.project-picture:hover .project-detail{
+    opacity:1;
+}
+
+@media (hover: none) {
+    .project-picture .project-detail {
+        opacity: 1;
+    }
+}
+
+.project-picture h3 {
 }
 
 #myProject .project{
