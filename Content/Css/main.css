@@ -9,7 +9,6 @@
     margin-left: 0px;
 }
 
-
 #header h1 {
     font-size: 44px;
     font-weight: bold;
@@ -66,13 +65,16 @@
     #header {
         height: 100vh;
     }
-    #header .paralax {
-        height: 100vh;
-    }
+
+        #header .paralax {
+            height: 100vh;
+        }
+
     .picture-me {
         width: 200px;
         height: 200px;
     }
+
     #header .right-col {
         text-align: center;
         padding-top: 30px;
@@ -98,6 +100,18 @@
 
 #header .description{
     margin-top:30px;
+}
+
+
+@media screen and (max-width: 640px) {
+    #header h1 {
+        font-size: 28px;
+    }
+
+    #header .big {
+        font-size: 20px;
+        line-height: 25px;
+    }
 }
 
 
@@ -138,9 +152,17 @@ a.but-border:hover {
     color: #464646;
 }
 
+.navbar-nav {
+    margin: 0 auto;
+}
+
 #navigationBar {
     background-color: #51697D;
-    text-align:center;
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 #navigationBar nav{
@@ -148,14 +170,14 @@ a.but-border:hover {
     color:white !important;
 }
 
-#navigationBar .nav-item.active{
-    font-weight:bold;
-    border-bottom:3px solid white;
-}
+    #navigationBar .nav-item.active {
+        font-weight: bold;
+        border-bottom: 3px solid white;
+    }
 
 #navigationBar .nav-item {
     height: 65px;
-    padding-top: 13px;
+    padding: 13px 27px;
 }
 
 #navigationBar .navbar {

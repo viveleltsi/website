@@ -9,11 +9,12 @@
     <meta name="description" content="Personal website of Dan Bourquin">
     <meta name="author" content="Dan Bourquin">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="Content/Css/main.css">
 
 </head>
 <body>
-    
+
     <header id="header" class="container-fluid">
         <div class="paralax row">
             <div id="particles-js">
@@ -22,7 +23,7 @@
         </div>
         <div class="container row">
             <div class="right-col col-md-4 col-sm-12 order-md-2">
-                <img class="picture-me" width="350" height="350" alt="me" src="Content/Images/me.png" />
+                <img class="picture-me" width="250" height="250" alt="me" src="Content/Images/me.png" />
             </div>
             <div class="left-col col-md-8 order-md-1">
                 <h1>Dan Bourquin</h1>
@@ -32,12 +33,20 @@
                     Game Designer
                 </p>
                 <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae luctus quam, at vulputate diam. Nulla vel suscipit arcu. Donec enim lectus, faucibus a urna eu, blandit consequat lorem. Vestibulum ut felis ac dolor suscipit fermentum. Nam aliquet velit sit amet libero accumsan venenatis. Vestibulum a urna id nibh accumsan varius non eget tortor. Ut sodales lacus eget varius rutrum.
-
+                    
                     <!--
+                    Quel est le rapport entre la conception de machine de production horlogère et le jeu vidéo? Il s'agît de deux de mes passions.
+                    Et bien que rien ne préconissait que je puisse faire les deux, j'ai choisis de ne pas rester sur la voie de la facilité en me cantonant
+                    aux choix professionnels, certes rassurants, mais ne me permettant pas d'assouvir toutes mes passions.<br />
+                    Me voilà donc diplomé dans le domaine industriel et professionel dans le développement de jeu vidéo. Et bien que la mécanique parait être très éloigné,
+                    mes études d'ingénieur m'ont appris des choses essentielles dans tout les domaines.
+                    Résoudre des problèmes et savoir où trouver les informations que l'ont à besoin. C'est donc avec une perspective scientifique que j'aborde chaque problèmatique dans mes projets qu'ils soient
+                    de programmer une intéligence articifielle où de choisir le meilleur matériaux pour un système de monitoring de personne agée.
+                    -->                     <!--
         Vous recherchez un développeur compétent. Je suis à la recherche de projet intéressant. Contactez moi!
     -->
                 </p>
+                <p>"Je ne sais pas tout, mais je sais apprendre"</p>
                 <div class="text-center">
                     <a href="#" class="but-border">
                         Contactez-moi
@@ -57,13 +66,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Compétences</a>
+                            <a class="nav-link" href="#competenceSection">Compétences</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Projets</a>
+                            <a class="nav-link" href="#myProject">Projets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Curriculum Vitæ</a>
+                            <a class="nav-link external-link"  target="_blank" href="https://www.linkedin.com/in/danbourquin">Curriculum Vitæ <i class="fas fa-external-link-square-alt"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -158,13 +167,62 @@
     </section>
 
     <script src="Content/Js/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="Content/Js/scripts.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script>
         particlesJS.load('particles-js', 'Content/particles.json', function () {
             console.log('callback - particles.js config loaded');
         });
-    </script>
 
-    <script src="Content/Js/scripts.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        $(function () {
+            // Cache selectors
+            var lastId,
+                topMenu = $("#navigationBar"),
+                topMenuHeight = topMenu.outerHeight() + 1,
+                // All list items
+                menuItems = topMenu.find("a:not(.external-link)"),
+                // Anchors corresponding to menu items
+                scrollItems = menuItems.map(function () {
+                    var item = $($(this).attr("href"));
+                    if (item.length) { return item; }
+                });
+
+            // Bind click handler to menu items
+            // so we can get a fancy scroll animation
+            menuItems.click(function (e) {
+                var href = $(this).attr("href"),
+                    offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+                $('html, body').stop().animate({
+                    scrollTop: offsetTop
+                }, 850);
+                e.preventDefault();
+            });
+
+            // Bind to scroll
+            $(window).scroll(function () {
+                // Get container scroll position
+                var fromTop = $(this).scrollTop() + topMenuHeight;
+
+                // Get id of current scroll item
+                var cur = scrollItems.map(function () {
+                    if ($(this).offset().top < fromTop)
+                        return this;
+                });
+                // Get the id of the current element
+                cur = cur[cur.length - 1];
+                var id = cur && cur.length ? cur[0].id : "";
+
+                if (lastId !== id) {
+                    lastId = id;
+                    // Set/remove active class
+                    menuItems
+                        .parent().removeClass("active")
+                        .end().filter("[href=\\#" + id + "]").parent().addClass("active");
+                }
+            });
+        });
+        
+    </script>
 </body>
 </html>
