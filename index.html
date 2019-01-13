@@ -162,8 +162,55 @@
 
 
     <section id="footer" class="container-fluid">
-        Toutes les images appartiennent à leurs propriétaires respectifs
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 left-col">
+                    <h4>Contact</h4>
+                    <p>
+                        Vous avez un projet dont vous aimeriez me parler ? Ou juste envie d'échanger autour d'un thé ? N'hésitez pas à m'écrire un e-mail :)
+                    </p>
+                    <h5>E-mail</h5>
+                    <p class="email">
+                        <script type="text/javascript" language="javascript">
+                            String.prototype.replaceAt = function (index, replacement) {
+                                return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+                            }
+                            {
+                                coded = "mt2Xc2zG.vxG@05xzp.Jt5"
+                                key = "ZTIfl2LoM61gJsPRkyr4mxCEFdp7ntq3i0e9wSADXO5QBuVvK8GYcHzhWUjNba"
+                                shift = coded.length
+                                link = ""
+                                for (i = 0; i < coded.length; i++) {
+                                    if (key.indexOf(coded.charAt(i)) == -1) {
+                                        ltr = coded.charAt(i)
+                                        link += (ltr)
+                                    }
+                                    else {
+                                        ltr = (key.indexOf(coded.charAt(i)) - shift + key.length) % key.length
+                                        link += (key.charAt(ltr))
+                                    }
+                                }
+                                link = link.replaceAt(0, "B");
+                                link = link.replaceAt(9, "D");
+                                document.write("<a href='mailto:" + link + "'>" + link +"</a>")
+                            }
+                            //-->
+                        </script>
+                    </p>
+                </div>
+                <div class="col-md-2 d-sm-none"></div>
+                <div class="col-md-6">
+                    <h4>Autres</h4>
+                    <a href="https://twitter.com/DanBourquin">Twitter</a><br/>
+                    <a href="https://vademetro.itch.io/">itch.io</a>
+                </div>
+            </div>
+        </div>
+        <div id="small-lines" class="text-center">
+            <p class="big">Site fait avec <span class="heart">♥</span> par Dan - Copyright © Dan Bourquin</p>
+            <p>Les différentes images appartiennent à leurs auteurs respectifs. Elles sont utilisés en vertue du droit de portefolio.</p>
+            <p>Unity | C# | C | JS | Ingénieur mécanique</p>
+        </div>
     </section>
 
     <script src="Content/Js/particles.min.js"></script>

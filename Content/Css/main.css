@@ -157,7 +157,7 @@ a.but-border:hover {
 }
 
 #navigationBar {
-    background-color: #51697D;
+    background-color: #6293B8;
     text-align: center;
     position: -webkit-sticky;
     position: sticky;
@@ -278,10 +278,105 @@ h2 {
 }
 
 #footer {
-    height: 60px;
     background-color: #51697D;
     color: white;
     font-size: 12px;
     padding: 20px;
     box-sizing: border-box;
+    background-image: url(../Images/footerTexture.png);
+    background-repeat: repeat;
+    color: #646464;
+    padding-top:70px;
+    padding-bottom:9px;
+}
+
+#footer .left-col p{
+    max-width:350px;
+}
+
+#footer h4 {
+    font-size:26px;
+    font-weight:bold;
+}
+
+#footer h5 {
+    font-weight: bold;
+}
+
+#footer .email,a {
+    font-size: 16px;
+    color: #2A8A9A;
+    font-weight:bold;
+    
+}
+
+#footer a {
+    transition: font-size 0.2s cubic-bezier(.4,.72,.6,1.32);
+}
+
+#footer a:hover {
+    text-decoration: unset;
+    font-size: 20px;
+    color: #6293B8;
+}
+
+#small-lines{
+    margin-top:50px;
+    font-size:10px;
+}
+
+#small-lines p{
+    margin-bottom:4px;
+}
+
+#small-lines .big{
+    font-size:16px;
+}
+
+
+@keyframes heartColor {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: yellow;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: green;
+    }
+}
+
+@keyframes heatBeat {
+    0% {
+        font-size: 16px;
+        color: #646464;
+    }
+
+    30% {
+        font-size: 16px;
+        color: #646464;
+    }
+
+    31% {
+        font-size: 18px;
+        color: #DF2E76;
+    }
+
+    70% {
+        font-size: 16px;
+        color: #646464;
+    }
+}
+
+.heart {
+    animation-name: heatBeat;
+    animation-duration:  2s;
+    animation-iteration-count:infinite;
+    transition:0.2s;
 }
