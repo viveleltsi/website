@@ -296,6 +296,10 @@ h2 {
     background-image: url("../Images/nes.jpg");
 }
 
+.flailPicture {
+    background-image: url("../Images/flail.png");
+}
+
 .project-picture:hover .project-overlay {
     background-color: black;
     filter: brightness(30%);
@@ -335,6 +339,7 @@ h2 {
     background-size: cover;
     background-position: center;
     transition: filter 0.3s;
+    transition: transform 0.3s;
 }
 
 .project-picture .project-detail {
@@ -343,8 +348,12 @@ h2 {
     transition: 0.2s;
 }
 
-.project-picture:hover .project-detail{
-    opacity:1;
+.project-picture:hover .project-detail {
+    opacity: 1;
+}
+
+.project-picture:hover .project-overlay {
+    transform: scale(1.05);
 }
 
 @media (hover: none) {
@@ -359,11 +368,15 @@ h2 {
     margin-bottom:0px;
 }
 
-.project-detail hr{
-    border:none;
-    border-top:2px solid white;
-    margin-top:0px;
-    margin-bottom:0px;
+.project-detail h3.small-margin {
+    margin-top: 42px;
+}
+
+.project-detail hr {
+    border: none;
+    border-top: 2px solid white;
+    margin-top: 0px;
+    margin-bottom: 0px;
     width: 65%;
 }
 
