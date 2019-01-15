@@ -456,3 +456,9 @@ h2 {
     animation-iteration-count:infinite;
     transition:0.2s;
 }
+
+#myVideo {
+    height: 100%;
+    position: absolute;
+    right: -13%;
+}
