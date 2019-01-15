@@ -219,17 +219,22 @@ h2 {
 
 .project-picture {
     position: relative;
-    color: white;
+    color: white !important;
     text-align: center;
     cursor: pointer;
     overflow: hidden;
+    text-decoration: none !important;
 }
 
-.project-picture .project-background {
-    max-width: 100%;
-    max-height: 100%;
-    
+.project-picture p, .project-picture a {
+    text-decoration: none !important;
+    color:white;
 }
+
+    .project-picture .project-background {
+        max-width: 100%;
+        max-height: 100%;
+    }
 
 
 
@@ -267,6 +272,14 @@ h2 {
 
 .zenitudePicture {
     background-image: url("../Images/Zenitude.PNG");
+}
+
+.blueprintPicture {
+    background-image: url("../Images/TheBlueprint2.png");
+}
+
+.timPicture {
+    background-image: url("../Images/tim.gif");
 }
 
 .project-picture:hover .project-overlay {
@@ -337,7 +350,7 @@ h2 {
     border-top:2px solid white;
     margin-top:0px;
     margin-bottom:0px;
-    width: 45%;
+    width: 65%;
 }
 
 .project-detail .subtitle{
