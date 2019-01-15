@@ -297,7 +297,7 @@ h2 {
 }
 
 .flailPicture {
-    background-image: url("../Images/flail.png");
+    background-image: url("../Images/flail.PNG");
 }
 
 .project-picture:hover .project-overlay {
