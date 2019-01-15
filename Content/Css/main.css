@@ -217,22 +217,11 @@ h2 {
     padding-bottom:80px;
 }
 
-.project-picture {
-    position: relative;
-    color: white !important;
-    text-align: center;
-    cursor: pointer;
-    overflow: hidden;
-    text-decoration: none !important;
-}
-
-.project-picture.no-link {
-    cursor: default !important;
-}
-
-.project-picture p, .project-picture a {
-    text-decoration: none !important;
+.project-picture{
+    position:relative;
     color:white;
+    text-align:center;
+    cursor:pointer;
 }
 
 .project-picture .project-background {
@@ -240,94 +229,16 @@ h2 {
     max-height: 100%;
 }
 
-.hokutoNoNekoPicture {
-    background-image: url("../Images/HokutoNoNeko.png");
-}
-
-.weeloPicture {
-    background-image: url("../Images/WeeloMain.PNG");
-}
-
-.notsomagicPicture {
-    background-image: url("../Images/notSoMagic.gif");
-}
-
-.muchgoldPicture {
-    background-image: url("../Images/MuchGold.jpg");
-}
-
-.greedymummyPicture {
-    background-image: url("../Images/greedyMummy.png");
-}
-
-.smallestmmorpgeverPicture {
-    background-image: url("../Images/SmallestMmorpgEver.PNG");
-}
-
-.cheatPicture {
-    background-image: url("../Images/CheatTeachMenu.png");
-}
-
-.rankrPicture {
-    background-image: url("../Images/RankrHeather.png");
-}
-
-.zenitudePicture {
-    background-image: url("../Images/Zenitude.PNG");
-}
-
-.blueprintPicture {
-    background-image: url("../Images/TheBlueprint2.png");
-}
-
-.timPicture {
-    background-image: url("../Images/tim.gif");
-}
-
-.arcadePicture {
-    background-image: url("../Images/BorneBar.jpeg");
-}
-
-.systemeBPicture {
-    background-image: url("../Images/SystemB.PNG");
-}
-
-.nesPicture {
-    background-image: url("../Images/nes.jpg");
-}
-
-.flailPicture {
-    background-image: url("../Images/flail.PNG");
-}
-
-.project-picture:hover .project-overlay {
-    background-color: black;
-    filter: brightness(30%);
-}
-
 .project-picture .project-link {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 0px;
+    top: 0px;
     width: 55px;
     height: 55px;
-    background-color: rgba(70,70,70,0.5);
-    /*background-image: url("../Images/link.png");*/
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity:0.5;
-    transition:opacity 0.3s;
-}
-
-.project-picture:hover .project-link {
-    background-color: transparent;
-    border:1px solid white;
-    opacity: 1;
-    transition:0.3s;
-}
-
-.project-picture .project-link i {
-    margin-top:20px;
+    background-color: #51697D;
+    background-image:url("../Images/link.png");
+    background-repeat:no-repeat;
+    background-position:center;
 }
 
 .project-picture .project-overlay {
@@ -336,24 +247,16 @@ h2 {
     left: 0px;
     bottom: 0px;
     right: 0px;
-    background-size: cover;
-    background-position: center;
-    transition: filter 0.3s;
-    transition: transform 0.3s;
 }
 
-.project-picture .project-detail {
-    position: relative;
-    opacity: 0;
-    transition: 0.2s;
+.project-picture .project-detail{
+    position:relative;
+    opacity:0;
+    transition:0.2s;
 }
 
-.project-picture:hover .project-detail {
-    opacity: 1;
-}
-
-.project-picture:hover .project-overlay {
-    transform: scale(1.05);
+.project-picture:hover .project-detail{
+    opacity:1;
 }
 
 @media (hover: none) {
@@ -362,30 +265,11 @@ h2 {
     }
 }
 
-.project-detail h3 {
-    margin-top:75px;
-    font-size:37px;
-    margin-bottom:0px;
+.project-picture h3 {
 }
 
-.project-detail h3.small-margin {
-    margin-top: 42px;
-}
-
-.project-detail hr {
-    border: none;
-    border-top: 2px solid white;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    width: 65%;
-}
-
-.project-detail .subtitle{
-    font-size:18px;
-}
-
-#myProject .project {
-    padding-top: 80px;
+#myProject .project{
+    padding-top:80px;
 }
 
 #myProject .project img {
@@ -495,10 +379,4 @@ h2 {
     animation-duration:  2s;
     animation-iteration-count:infinite;
     transition:0.2s;
-}
-
-#myVideo {
-    height: 100%;
-    position: absolute;
-    right: -13%;
 }
