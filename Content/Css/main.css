@@ -254,7 +254,7 @@ h2 {
 }
 
 .smallestmmorpgeverPicture {
-    background-image: url("../Images/SmallestMmorpgEver.png");
+    background-image: url("../Images/SmallestMmorpgEver.PNG");
 }
 
 .cheatPicture {
@@ -266,7 +266,7 @@ h2 {
 }
 
 .zenitudePicture {
-    background-image: url("../Images/Zenitude.png");
+    background-image: url("../Images/Zenitude.PNG");
 }
 
 .project-picture:hover .project-overlay {
