@@ -348,6 +348,18 @@ h2 {
     transition: 0.2s;
 }
 
+.project-picture .badge-container{
+    position: absolute;
+    bottom:8px;
+	left:8px;
+}
+
+.project-picture .badge-container .badge-primary{
+	background-color:#6293B8;
+	background-color:rgba(255,255,255,0.3);
+	border:1px solid white;
+}
+
 .project-picture:hover .project-detail {
     opacity: 1;
 }
