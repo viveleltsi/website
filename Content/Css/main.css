@@ -372,9 +372,9 @@ h2 {
     transform: scale(1.05);
 }
 
-@media (hover: none) {
+@media (max-width: 780px) {
     .project-picture .project-detail {
-        opacity: 1;
+        opacity: 1 !important;
     }
 }
 
