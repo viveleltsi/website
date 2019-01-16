@@ -519,6 +519,11 @@ h2 {
     right: -13%;
 }
 
+#FavoritesGames {
+    padding-bottom: 50px;
+    background-color: white;
+}
+
 .best-games {
     display: flex;
     align-items: center;
