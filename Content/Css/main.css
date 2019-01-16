@@ -300,6 +300,10 @@ h2 {
     background-image: url("../Images/flail.PNG");
 }
 
+.runePicture {
+    background-image: url("../Images/rune.gif");
+}
+
 .project-picture:hover .project-overlay {
     background-color: black;
     filter: brightness(30%);
