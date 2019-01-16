@@ -304,10 +304,7 @@ h2 {
     background-image: url("../Images/rune.gif");
 }
 
-.project-picture:hover .project-overlay {
-    background-color: black;
-    filter: brightness(30%);
-}
+
 
 .project-picture .project-link {
     position: absolute;
@@ -323,12 +320,7 @@ h2 {
     transition:opacity 0.3s;
 }
 
-.project-picture:hover .project-link {
-    background-color: transparent;
-    border:1px solid white;
-    opacity: 1;
-    transition:0.3s;
-}
+
 
 .project-picture .project-link i {
     margin-top:20px;
@@ -346,47 +338,67 @@ h2 {
     transition: transform 0.3s;
 }
 
-.project-picture .project-detail {
-    position: relative;
-    opacity: 0;
-    transition: 0.2s;
-}
-
 .project-picture .badge-container{
     position: absolute;
     bottom:8px;
 	left:8px;
 }
 
-.project-picture .badge-container .badge-primary{
-	background-color:#6293B8;
-	background-color:rgba(255,255,255,0.3);
-	border:1px solid white;
+.project-picture .badge-container .badge-primary {
+    background-color: #6293B8;
+    border: 1px solid white;
 }
 
-.project-picture:hover .project-detail {
-    opacity: 1;
+.project-picture .badge-container .badge-secondary {
+    background-color: #8a63aa;
+    border: 1px solid white;
 }
 
-.project-picture:hover .project-overlay {
+.project-picture:hover .project-overlay,
+.project-picture.hover .project-overlay {
+    background-color: black;
+    filter: brightness(30%);
     transform: scale(1.05);
 }
 
-@media (max-width: 780px) {
+.project-picture:hover .project-link,
+.project-picture.hover .project-link {
+    background-color: transparent;
+    border: 1px solid white;
+    opacity: 1;
+    transition: 0.3s;
+}
+.project-picture .project-detail {
+    position: relative;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.project-picture:hover .project-detail,
+.project-picture.hover .project-detail {
+    opacity: 1;
+}
+
+/*@media (max-width: 780px) {
     .project-picture .project-detail {
         opacity: 1 !important;
     }
-}
+}*/
+
 
 .project-detail h3 {
-    margin-top:75px;
-    font-size:37px;
-    margin-bottom:0px;
+    margin-top: 75px;
+    font-size: 37px;
+    margin-bottom: 0px;
 }
 
 .project-detail h3.small-margin {
     margin-top: 42px;
 }
+
+    .project-detail h3.tiny-margin {
+        margin-top: 20px;
+    }
 
 .project-detail hr {
     border: none;

@@ -157,6 +157,7 @@
                     </div>
                     <div class="badge-container">
                         <span class="badge badge-pill badge-primary">All Code</span>
+                        <span class="badge badge-pill badge-secondary">GameDesign</span>
                     </div>
                 </div>
 
@@ -185,7 +186,7 @@
                     </div>
                     <div class="project-link rounded-circle"><i class="fas fa-arrow-right fa-lg"></i></div>
                     <div class="project-detail">
-                        <h3>Much Gold</h3>
+                        <h3 class="tiny-margin">Much Gold</h3>
                         <hr />
                         <p class="subtitle">Ludum Dare 34</p>
                         <p>
@@ -211,6 +212,7 @@
                     </div>
                     <div class="badge-container">
                         <span class="badge badge-pill badge-primary">3C Code</span>
+                        <span class="badge badge-pill badge-secondary">GameDesign</span>
                     </div>
                 </a>
                 <div class="project-picture col-md-6 no-link" style="height:300px;">
@@ -219,7 +221,7 @@
                     </div>
                     <!--<div class="project-link rounded-circle"><i class="fas fa-arrow-right fa-lg"></i></div>-->
                     <div class="project-detail">
-                        <h3 class="small-margin">Smallest Mmorpg Ever</h3>
+                        <h3 class="tiny-margin">Smallest Mmorpg Ever</h3>
                         <hr />
                         <p class="subtitle">Ludum dare 38</p>
                         <p>
@@ -229,6 +231,7 @@
                     </div>
                     <div class="badge-container">
                         <span class="badge badge-pill badge-primary">Client Code</span>
+                        <span class="badge badge-pill badge-secondary">GameDesign</span>
                     </div>
                 </div>
                 <a target="_blank" href="https://viveleltsi.itch.io/the-blueprint" class="project-picture col-md-3" style="height:300px;">
@@ -256,7 +259,7 @@
                     </div>
                     <div class="project-link rounded-circle"><i class="fas fa-arrow-right fa-lg"></i></div>
                     <div class="project-detail">
-                        <h3>Greedy Mummy II</h3>
+                        <h3 class="tiny-margin">Greedy Mummy II</h3>
                         <hr />
                         <p class="subtitle">Ludum dare 40</p>
                         <p>
@@ -271,12 +274,15 @@
                         </video>
                     </div>
                     <div class="project-detail">
-                        <h3>Rune</h3>
+                        <h3 class="small-margin">Rune</h3>
                         <hr />
                         <p class="subtitle">Prototype personnel</p>
                         <p>
                             L'idée de ce jeu est de créer des sorts procéduraux en dessinant des runes. Le livre des étoiles à été une de mes inspirations.
                         </p>
+                    </div>
+                    <div class="badge-container">
+                        <span class="badge badge-pill badge-primary">All Code</span>
                     </div>
                 </div>
                 <a target="_blank" href="https://vademetro.itch.io/rankr" class="project-picture col-md-10" style="height:350px;">
@@ -287,7 +293,7 @@
                     <div class="project-detail">
                         <h3>Rankr</h3>
                         <hr />
-                        <p class="subtitle">Epic game jam</p>
+                        <p class="subtitle">30'000 téléchargements</p>
                         <p>
                             Plagiant Tinder sur l'apparence ce jeu de "rencontre" vous proposera de discuter avec des personnes fortes sympathiques en apparences. Saurez-vous débloquer toutes les fins?
                         </p>
@@ -334,7 +340,7 @@
                     <div class="project-detail">
                         <h3>Flail</h3>
                         <hr />
-                        <p class="subtitle">Project en cours</p>
+                        <p class="subtitle">Projet personnel en cours</p>
                         <p>
                             Le but de ce projet et de faire des prototypes autour d'un couch game. Il est développé avec un game designer travaillant chez Ubisoft ainsi qu'un artiste talentueux.
                         </p>
@@ -374,6 +380,9 @@
                         <p>
                             Développement d'une application de payement pour les coopérateurs-trices d'une épicerie Bio, locale et éthique.
                         </p>
+                    </div>
+                    <div class="badge-container">
+                        <span class="badge badge-pill badge-primary">All Code</span>
                     </div>
                 </div>
                 <div class="project-picture no-link col-md-4" style="height:300px;">
@@ -540,6 +549,23 @@
                         .end().filter("[href=\\#" + id + "]").parent().addClass("active");
                 }
             });
+
+            $('.project-picture').on("touchstart", function (e) {
+                console.log("touch");
+                'use strict'; //satisfy code inspectors
+                var link = $(this); //preselect the link
+                if (link.hasClass('hover')) {
+                    return true;
+                }
+                else {
+                    console.log("return false");
+                    link.addClass('hover');
+                    $('.project-picture').not(this).removeClass('hover');
+                    e.preventDefault();
+                    return false; //extra, and to make sure the function has consistent return points
+                }
+            });
+
         });
 
     </script>
