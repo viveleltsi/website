@@ -304,7 +304,9 @@ h2 {
     background-image: url("../Images/rune.png");
 }
 
-
+.learnitPicture {
+    background-image: url("../Images/learnit.png");
+}
 
 .project-picture .project-link {
     position: absolute;
