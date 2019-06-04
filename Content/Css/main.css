@@ -346,6 +346,13 @@ h2 {
 	left:8px;
 }
 
+.project-picture .download-container {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    text-align:right;
+}
+
 .project-picture .badge-container .badge-primary {
     background-color: #6293B8;
     border: 1px solid white;
@@ -619,3 +626,4 @@ section{
 section:nth-of-type(even) {
     background-color: #E0E0E0 !important;
 }
+
