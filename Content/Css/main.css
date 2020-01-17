@@ -297,7 +297,7 @@ h2 {
 }
 
 .flailPicture {
-    background-image: url("../Images/flail.PNG");
+    background-image: url("../Images/Meteora.PNG");
 }
 
 .runePicture {
@@ -351,6 +351,13 @@ h2 {
     bottom: 8px;
     right: 8px;
     text-align:right;
+}
+
+.project-picture .download-container-top {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    text-align:left;
 }
 
 .project-picture .badge-container .badge-primary {
